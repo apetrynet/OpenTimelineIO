@@ -28,7 +28,7 @@ jobs:
       OTIO_CXX_BUILD_TMP_DIR: ${{ github.workspace }}/build
 
     steps:
-    - uses: actions/checkout@v2.3.4
+    - uses: actions/checkout@v2.4.0
       with:
         submodules: 'recursive'
     - name: Set up Python ${{ matrix.python-version }}
@@ -73,7 +73,7 @@ jobs:
         os: [ubuntu-latest, macos-latest, windows-latest]
         python-build: [cp27*, cp37*, cp38*, cp39*]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.4.0
 
       # cibuildwheel 1.12.0 gates Python 2.7 wheels builds
       # by using two environment variables, DISTUTILS_USE_SDK and MSSdk.
@@ -107,7 +107,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2.4.0
 
     - uses: actions/setup-python@v2
 
